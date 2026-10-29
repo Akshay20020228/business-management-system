@@ -1,0 +1,217 @@
+
+/* Main page background */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eaf1ff 0%, #f5f7fb 50%, #e9f5f5 100%);
+  color: #1e293b;
+}
+
+/* Home page container */
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 24px;
+}
+
+/* Dashboard heading */
+.app > h1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 32px 8px;
+  color: #ffffff;
+  background: linear-gradient(120deg, #173b70, #2563eb);
+  border-radius: 18px 18px 0 0;
+  font-size: clamp(25px, 4vw, 36px);
+  letter-spacing: -0.5px;
+}
+
+.app > p {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  padding: 4px 32px 28px;
+  color: #dbeafe;
+  background: linear-gradient(120deg, #173b70, #2563eb);
+  border-radius: 0 0 18px 18px;
+  line-height: 1.6;
+}
+
+/* Employee dashboard content */
+.employee-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.08);
+  overflow-x: auto;
+}
+
+.employee-list h2 {
+  margin: 8px 0 20px;
+  color: #173b70;
+  font-size: 23px;
+}
+
+/* Add employee form */
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 520px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.employee-form label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.employee-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.employee-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  background: #ffffff;
+}
+
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.form-actions button,
+.edit-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-actions .cancel-button {
+  background: #64748b;
+}
+
+.edit-button:hover {
+  background: #1d4ed8;
+}
+
+.form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* Feedback messages */
+.error-message {
+  color: #b91c1c;
+  background: #fef2f2;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.success-message {
+  color: #166534;
+  background: #f0fdf4;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Employee table */
+.employee-list table {
+  width: 100%;
+  min-width: 520px;
+  margin-top: 15px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.employee-list th,
+.employee-list td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.employee-list th {
+  background: #eff6ff;
+  color: #1e40af;
+  font-weight: 700;
+}
+
+.employee-list tbody tr:hover {
+  background: #f8fafc;
+}
+
+.employee-list tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Mobile and tablet layout */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px 12px;
+  }
+
+  .app > h1 {
+    padding: 22px 20px 8px;
+  }
+
+  .app > p {
+    padding: 4px 20px 22px;
+    margin-bottom: 18px;
+  }
+
+  .employee-list {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .employee-list h2 {
+    font-size: 20px;
+  }
+
+  .employee-list th,
+  .employee-list td {
+    padding: 11px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .app {
+    padding: 12px 8p
+  }
+
+  .employee-list {
+    padding: 12px;
+  }
+}
